@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Click Display</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .thumbnails img {
+            width: 80px;
+            height: auto;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .thumbnails img:hover {
+            border: 2px solid #666;
+        }
+        .main-image {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Image Display -->
+        <img id="mainImage" src="images/Avocado.png" class="main-image" alt="Main Image">
+        
+        <!-- Thumbnail Images -->
+        <div class="thumbnails">
+            <img src="images/Avocado.png" alt="Thumbnail 1" onclick="changeImage('images/Avocado.png')">
+            <img src="images/cherry.png" alt="Thumbnail 2" onclick="changeImage('images/cherry.png')">
+            <img src="images/Lychee_.png" alt="Thumbnail 3" onclick="changeImage('images/Lychee_.png')">
+            <img src="images/peach.png" alt="Thumbnail 4" onclick="changeImage('images/peach.png')">
+            <img src="images/Longan.png" alt="Thumbnail 4" onclick="changeImage('images/Longan.png')">
+        </div>
+    </div>
+
+    <script>
+        // Function to change the main image
+        function changeImage(imageSrc) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = imageSrc;
+        }
+    </script>
+</body>
+</html>
